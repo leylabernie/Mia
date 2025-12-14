@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>New Visitor Discount Pop-up</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4c4ce6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111121",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#0e0e1b] dark:text-white antialiased">
+<!-- Main Content Simulation (Background Page) -->
+<div aria-hidden="true" class="relative min-h-screen w-full flex flex-col items-center justify-start pt-20 overflow-hidden opacity-50 blur-[2px] pointer-events-none select-none">
+<!-- Simulating a header -->
+<header class="w-full max-w-[1200px] flex justify-between items-center px-8 mb-12">
+<div class="w-32 h-8 bg-gray-300 dark:bg-gray-700 rounded"></div>
+<div class="flex gap-8">
+<div class="w-16 h-4 bg-gray-300 dark:bg-gray-700 rounded"></div>
+<div class="w-16 h-4 bg-gray-300 dark:bg-gray-700 rounded"></div>
+<div class="w-16 h-4 bg-gray-300 dark:bg-gray-700 rounded"></div>
+</div>
+</header>
+<!-- Simulating Hero Section -->
+<div class="w-full max-w-[1200px] h-[400px] bg-gray-200 dark:bg-gray-800 rounded-lg mb-12 flex items-center justify-center">
+<span class="text-gray-400 dark:text-gray-600">Site Content Placeholder</span>
+</div>
+<!-- Simulating Products Grid -->
+<div class="w-full max-w-[1200px] grid grid-cols-3 gap-8 px-4">
+<div class="aspect-[3/4] bg-gray-200 dark:bg-gray-800 rounded-lg"></div>
+<div class="aspect-[3/4] bg-gray-200 dark:bg-gray-800 rounded-lg"></div>
+<div class="aspect-[3/4] bg-gray-200 dark:bg-gray-800 rounded-lg"></div>
+</div>
+</div>
+<!-- Pop-up Overlay Container -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm transition-opacity duration-300">
+<!-- Modal Card -->
+<div class="relative flex flex-col md:flex-row w-full max-w-[900px] bg-white dark:bg-[#1a1a2e] rounded-xl shadow-2xl overflow-hidden animate-[fadeInUp_0.4s_ease-out]">
+<!-- Close Button (Absolute) -->
+<button aria-label="Close modal" class="absolute top-4 right-4 z-10 p-2 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<!-- Left Side: Image -->
+<div class="hidden md:flex md:w-5/12 relative bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" data-alt="Elegant Indian saree fabric with intricate gold embroidery detail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaz706WAIyxAiEKjIjiMXy3PJ9WfeD8-kReFZN9kVFelOCK2A4-HM1KROyoQS2fysfmLt0hf_AXBKnAKX6Sh7Pp3ju22mFNwBbJ_oAD7zBpwL4_ygV80m4OecTSot0bwDDICoo6v0e0js9V__pOB-UQD0W3TscgzJZMbKFhi9b0A9sKOgp89OD2djcOdO0Jxs0tsAnmjO9B3d5pdTM4jErOJFdq1syq5Xc3Xx0S-ohjPLeu0PY40e6FUxj9sx_SlsraLJsRKh8ZDA');">
+</div>
+<!-- Gradient overlay for text readability if needed, though mostly decorative here -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+</div>
+<!-- Right Side: Content -->
+<div class="w-full md:w-7/12 flex flex-col justify-center p-8 md:p-12 lg:p-16">
+<div class="flex flex-col gap-6 text-center md:text-left">
+<!-- Header Group -->
+<div class="space-y-3">
+<span class="inline-block px-3 py-1 text-xs font-semibold tracking-widest uppercase text-primary bg-primary/10 rounded-full w-fit mx-auto md:mx-0">
+                            New Arrivals
+                        </span>
+<h2 class="text-3xl md:text-4xl font-display font-light text-[#0e0e1b] dark:text-white leading-tight tracking-tight">
+                            A Royal <br/><span class="font-bold text-primary">Welcome</span>
+</h2>
+<p class="text-base text-gray-600 dark:text-gray-300 font-light leading-relaxed max-w-[400px] mx-auto md:mx-0">
+                            Join our exclusive circle for first access to new collections. Subscribe now and receive <span class="font-medium text-primary">10% off</span> your first order of exquisite Indian ethnic wear.
+                        </p>
+</div>
+<!-- Input Form -->
+<div class="w-full max-w-[420px] mx-auto md:mx-0 mt-2">
+<form class="flex flex-col gap-3" onsubmit="event.preventDefault();">
+<label class="sr-only" for="email">Email Address</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400">mail</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3.5 bg-background-light dark:bg-background-dark border border-transparent focus:border-primary/50 text-[#0e0e1b] dark:text-white rounded-lg focus:ring-2 focus:ring-primary/20 placeholder:text-gray-400 text-sm transition-all outline-none" id="email" placeholder="Enter your email address" required="" type="email"/>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-3.5 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-lg shadow-primary/25 transition-all transform active:scale-[0.98]" type="submit">
+<span>Claim My 10% Off</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Footer / Meta Links -->
+<div class="flex flex-col gap-3 items-center md:items-start mt-2">
+<p class="text-xs text-gray-400 dark:text-gray-500 font-normal">
+                            By signing up, you agree to receive marketing emails. Unsubscribe anytime.
+                        </p>
+<button class="text-sm text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 underline decoration-gray-300 underline-offset-4 transition-colors">
+                            No thanks, I prefer full price
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Keyframes for smooth entrance -->
+<style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</body></html>

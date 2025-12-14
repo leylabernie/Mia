@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxury Shopping Cart - Saree Vastra</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // New Pastel Palette
+              background: "#FCF8F8", // Very light pink/white - Main BG
+              "surface-card": "#FFFFFF", // Clean white for product cards
+              "surface-sidebar": "#FBEFEF", // Light pink - Summary BG
+              // Accents & Borders
+              border: "#F9DFDF", // Soft pink - Borders
+              highlight: "#F5AFAF", // Pink - Primary Accents/Remove button
+              badge: "#FBF3D5", // Pale yellow
+              // Brand Colors (Greens)
+              secondary: "#D6DAC8", // Sage green light - Secondary elements
+              primary: "#9CAFAA", // Sage green dark - Main Actions/Headings
+              "primary-dark": "#7E9182", // Darker shade for hover states
+              // Typography
+              text: "#525252", // Dark Grey for readability
+              "text-muted": "#888888",
+            },
+            fontFamily: {
+              serif: ["'Cormorant Garamond'", "serif"],
+              body: ["'Lato'", "sans-serif"],
+            },
+            boxShadow: {
+              'soft': '0 4px 20px -2px rgba(214, 218, 200, 0.25)', // Colored shadow using secondary
+            }
+          },
+        },
+      };
+    </script>
+<style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FCF8F8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #D6DAC8;
+            border-radius: 4px;
+        }input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="bg-background text-text antialiased min-h-screen flex flex-col selection:bg-border selection:text-primary">
+<nav class="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-24">
+<div class="flex-shrink-0 flex items-center gap-3">
+<span class="text-primary text-3xl font-serif">
+<span class="material-icons text-4xl align-middle text-secondary">spa</span>
+</span>
+<span class="text-3xl font-serif font-medium text-primary tracking-wider uppercase">Saree Vastra</span>
+</div>
+<div class="hidden md:flex space-x-12 items-center">
+<a class="text-text hover:text-primary transition-colors text-sm uppercase tracking-widest font-medium" href="#">Home</a>
+<a class="text-text hover:text-primary transition-colors text-sm uppercase tracking-widest font-medium" href="#">Shop</a>
+<a class="text-text hover:text-primary transition-colors text-sm uppercase tracking-widest font-medium" href="#">About</a>
+<a class="text-text hover:text-primary transition-colors text-sm uppercase tracking-widest font-medium" href="#">Contact</a>
+<div class="relative group cursor-pointer p-2">
+<span class="material-icons text-primary text-2xl">shopping_bag</span>
+<span class="absolute top-1 right-0 bg-highlight text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full shadow-sm">3</span>
+</div>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-text hover:text-primary p-2" type="button">
+<span class="material-icons">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full relative">
+<div class="absolute top-0 right-0 -z-10 opacity-10 pointer-events-none hidden lg:block transform translate-x-1/4 -translate-y-12">
+<svg height="600" viewBox="0 0 200 200" width="600" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.7,-76.3C58.9,-69.3,69.1,-58.3,77.3,-46.3C85.5,-34.3,91.7,-21.3,92.5,-8.1C93.3,5.1,88.7,18.5,81.4,30.3C74.1,42.1,64.1,52.3,52.8,60.8C41.5,69.3,28.9,76.1,15.6,78.9C2.3,81.7,-11.7,80.5,-24.5,76.1C-37.3,71.7,-48.9,64.1,-58.5,54.3C-68.1,44.5,-75.7,32.5,-80.1,19.3C-84.5,6.1,-85.7,-8.3,-81.1,-21.2C-76.5,-34.1,-66.1,-45.5,-54.3,-53.4C-42.5,-61.3,-29.3,-65.7,-16.5,-68.2C-3.7,-70.7,8.7,-71.3,21.5,-70.6" fill="#F5AFAF" transform="translate(100 100)"></path>
+</svg>
+</div>
+<div class="mb-12 text-center relative">
+<span class="text-primary text-lg font-serif italic mb-2 block">The Boutique Collection</span>
+<h1 class="text-5xl md:text-6xl font-serif text-text mb-4 font-light">Your Shopping Cart</h1>
+<div class="h-1 w-24 bg-gradient-to-r from-secondary to-border mx-auto rounded-full"></div>
+</div>
+<div class="lg:grid lg:grid-cols-12 lg:gap-16 items-start">
+<div class="lg:col-span-8">
+<div class="flex justify-between items-end border-b border-border pb-4 mb-8">
+<h2 class="text-2xl font-serif text-text-muted font-light">Selected Items <span class="text-lg text-primary ml-2">(3)</span></h2>
+</div>
+<div class="group bg-surface-card border border-border rounded-xl p-6 mb-6 shadow-soft hover:shadow-lg transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex flex-col sm:flex-row gap-8">
+<div class="w-full sm:w-36 h-48 flex-shrink-0 overflow-hidden rounded-lg border border-border bg-background relative">
+<img alt="Red and Gold Banarasi Silk Saree details" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDAHg5815R1eBVeYuYLeY-oWXXc2de0AGJgBaoBnoV1JoWqwae029c3P3vTGzoFf_-2AzAJfMdz7R96XhEOqKbBqhxgYVaJQJFLN4Of776LsvsIaiMptOUBt59eETiApTStQA6NbuWBCXkQ30M7TsviY6fIOe9AGZfnNeEZfmOr2PvFa4cq93LboajmJpY-LPXEgWwbbroJxR0fA2wF8D9wFkZkn5RcZz8AEaLZk5fWkIKynUqu20Mwj9aNVMR9ZM1e8X6iEBinfg"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-2xl font-serif text-text tracking-wide mb-2">Silk Banarasi Saree</h3>
+<div class="flex items-center gap-3 text-sm text-text-muted mb-1">
+<span class="px-2 py-0.5 bg-background rounded border border-border text-xs uppercase tracking-wider">Red / Gold</span>
+</div>
+<p class="text-sm text-text-muted">Size: Free Size</p>
+</div>
+<p class="text-xl font-serif font-medium text-primary">₹12,500</p>
+</div>
+<div class="flex justify-between items-end mt-6 sm:mt-0">
+<button class="flex items-center space-x-2 text-sm text-text-muted hover:text-highlight transition-colors group/btn">
+<span class="material-icons text-lg group-hover/btn:scale-110 transition-transform">close</span>
+<span class="uppercase tracking-wider text-xs font-medium">Remove</span>
+</button>
+<div class="flex items-center gap-3">
+<span class="text-xs uppercase text-text-muted tracking-widest mr-1">Qty</span>
+<div class="flex items-center border border-border rounded-md bg-background">
+<button class="w-8 h-8 flex items-center justify-center text-secondary hover:bg-surface-card hover:text-primary transition-colors">-</button>
+<input class="w-10 text-center border-0 bg-transparent text-sm font-medium text-text p-0 focus:ring-0" readonly="" type="text" value="1"/>
+<button class="w-8 h-8 flex items-center justify-center text-secondary hover:bg-surface-card hover:text-primary transition-colors">+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="group bg-surface-card border border-border rounded-xl p-6 mb-6 shadow-soft hover:shadow-lg transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex flex-col sm:flex-row gap-8">
+<div class="w-full sm:w-36 h-48 flex-shrink-0 overflow-hidden rounded-lg border border-border bg-background relative">
+<img alt="Blue and Silver Anarkali Suit worn by model" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw8-cpHFmh9q9s8DkufRMdiLxPKDrfprqfe0Uz-iYraq2Z99UWSC8N7llYC8KSSxTHOwHpqdpn0WvDea0H5otRNrdxKrXWFO_lYGrrBqG0gBNksrOjlwY1_7oPjXHlXVjANrQcmPV-i80ksl1nqHWXmGrBkczGjZTBkmCoDd9SFkIaIDy7UhdamltEsMCNWShW31jt2GH1mn8mpZimN-H3qzukQPB1OUZlhMDZuDzarWuNUIELpUQp29aMVVsxVtuf9uk_xtzIqF4"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-2xl font-serif text-text tracking-wide mb-2">Anarkali Suit Set</h3>
+<div class="flex items-center gap-3 text-sm text-text-muted mb-1">
+<span class="px-2 py-0.5 bg-background rounded border border-border text-xs uppercase tracking-wider">Blue / Silver</span>
+</div>
+<p class="text-sm text-text-muted">Size: M</p>
+</div>
+<p class="text-xl font-serif font-medium text-primary">₹6,800</p>
+</div>
+<div class="flex justify-between items-end mt-6 sm:mt-0">
+<button class="flex items-center space-x-2 text-sm text-text-muted hover:text-highlight transition-colors group/btn">
+<span class="material-icons text-lg group-hover/btn:scale-110 transition-transform">close</span>
+<span class="uppercase tracking-wider text-xs font-medium">Remove</span>
+</button>
+<div class="flex items-center gap-3">
+<span class="text-xs uppercase text-text-muted tracking-widest mr-1">Qty</span>
+<div class="flex items-center border border-border rounded-md bg-background">
+<button class="w-8 h-8 flex items-center justify-center text-secondary hover:bg-surface-card hover:text-primary transition-colors">-</button>
+<input class="w-10 text-center border-0 bg-transparent text-sm font-medium text-text p-0 focus:ring-0" readonly="" type="text" value="1"/>
+<button class="w-8 h-8 flex items-center justify-center text-secondary hover:bg-surface-card hover:text-primary transition-colors">+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="group bg-surface-card border border-border rounded-xl p-6 mb-6 shadow-soft hover:shadow-lg transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex flex-col sm:flex-row gap-8">
+<div class="w-full sm:w-36 h-48 flex-shrink-0 overflow-hidden rounded-lg border border-border bg-background relative">
+<img alt="White Cotton Kurta Pajama worn by model" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC_X7yCOHIaHMA2sXR5rQa80u5h0Zx0WwhRhlcNkSyr50xqPbVeksotpc_1Yw1iBsHdiZRD9rPn1Rjwaz50rlB7tJ92WgyNBKEEyrRVmdRnHPq5ag2qLxhkXzGiYkRgMh_ozO5eQrBTjOSDm4AoF4-b4heqABlXffKfMTeYedbZQOZAOqcAQrAl70U2EPSnvdNi9-LJM3sHQHHH-yTl2CSS8oBT6HbczCQK--tvMlHh3zkmr3XKNDu7L5ruCyege7thRjrGDtV0jI"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-2xl font-serif text-text tracking-wide mb-2">Cotton Kurta Pajama</h3>
+<div class="flex items-center gap-3 text-sm text-text-muted mb-1">
+<span class="px-2 py-0.5 bg-background rounded border border-border text-xs uppercase tracking-wider">White</span>
+</div>
+<p class="text-sm text-text-muted">Size: L</p>
+</div>
+<p class="text-xl font-serif font-medium text-primary">₹2,400</p>
+</div>
+<div class="flex justify-between items-end mt-6 sm:mt-0">
+<button class="flex items-center space-x-2 text-sm text-text-muted hover:text-highlight transition-colors group/btn">
+<span class="material-icons text-lg group-hover/btn:scale-110 transition-transform">close</span>
+<span class="uppercase tracking-wider text-xs font-medium">Remove</span>
+</button>
+<div class="flex items-center gap-3">
+<span class="text-xs uppercase text-text-muted tracking-widest mr-1">Qty</span>
+<div class="flex items-center border border-border rounded-md bg-background">
+<button class="w-8 h-8 flex items-center justify-center text-secondary hover:bg-surface-card hover:text-primary transition-colors">-</button>
+<input class="w-10 text-center border-0 bg-transparent text-sm font-medium text-text p-0 focus:ring-0" readonly="" type="text" value="1"/>
+<button class="w-8 h-8 flex items-center justify-center text-secondary hover:bg-surface-card hover:text-primary transition-colors">+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-10">
+<a class="inline-flex items-center text-primary hover:text-primary-dark font-medium transition-all group" href="#">
+<span class="material-icons text-lg mr-2 transform rotate-180 group-hover:-translate-x-1 transition-transform">arrow_right_alt</span>
+<span class="border-b border-transparent group-hover:border-primary-dark uppercase tracking-wider text-sm">Continue Shopping</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-4 mt-10 lg:mt-0">
+<div class="bg-surface-sidebar p-8 rounded-xl border border-border shadow-soft sticky top-28">
+<h2 class="text-3xl font-serif text-text mb-8 text-center">Order Summary</h2>
+<div class="space-y-5 text-sm">
+<div class="flex justify-between items-center text-text-muted">
+<span class="font-light">Subtotal</span>
+<span class="font-medium text-text">₹21,700</span>
+</div>
+<div class="flex justify-between items-center text-text-muted">
+<span class="font-light">Estimated Shipping</span>
+<span class="font-medium text-text">₹500</span>
+</div>
+<div class="flex justify-between items-center text-text-muted">
+<span class="font-light">Estimated Tax</span>
+<span class="font-medium text-text">₹1,953</span>
+</div>
+</div>
+<div class="border-t border-secondary/20 my-8 pt-6">
+<label class="block text-xs uppercase tracking-widest text-text-muted mb-3" for="discount-code">Discount Code</label>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface-card border border-border rounded-lg px-4 py-2.5 text-sm focus:ring-1 focus:ring-primary focus:border-primary placeholder-secondary" id="discount-code" placeholder="Enter promo code" type="text"/>
+<button class="bg-secondary hover:bg-primary text-white px-5 py-2 rounded-lg text-sm font-medium transition-colors uppercase tracking-wide">Apply</button>
+</div>
+</div>
+<div class="border-t border-secondary/20 pt-6 mb-8">
+<div class="flex justify-between items-end">
+<span class="text-xl font-serif text-text">Total</span>
+<div class="text-right">
+<span class="text-3xl font-serif font-bold text-primary block">₹24,153</span>
+<p class="text-[10px] text-text-muted uppercase tracking-wider mt-1">Including GST</p>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary-dark text-white py-4 px-4 rounded-lg text-sm font-bold tracking-widest uppercase transition-all shadow-md hover:shadow-xl transform hover:-translate-y-0.5">
+                    Proceed to Checkout
+                </button>
+<div class="flex justify-center items-center gap-6 mt-8 opacity-50 grayscale transition-opacity hover:opacity-80">
+<img alt="Visa" class="h-5 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeOWXKLE8sm8Pjvx7FwyTxafwomwO9Lke2eGuu2DPTlJibOJvNAT3yhv5n71_dRzlUDBL8MkKpzvi2rQ51uWJswIt1CABZleq2HbVmciZFzvSmpzf2P1Codhzlkv4zJs534s2HvzjUh2nTEInt6ZYvFLeU9MHRfDT-WwDZ1CcXKYwEPoh6vju5EDQKLGdi0smzZ2GRdVffgNGqcVQydbMaBqGmmW1IP_3OQk3hvuvisFNTywoLCeZ6raG8jnScQiykHqR2j1j0dlc"/>
+<img alt="Mastercard" class="h-7 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa1uRORpWXGew1VNCxkWIEikngPbgMpekT_rA31qF_Fz8EtPgzwnR80_6z8XB5T6AsvY0LBxCtxGfnx2g9c7prLL9E51CzDmWshWRqXNnF-glJ0gpf51onjJXCyt_BkIyDDpERtJqd6ciIJhYQx1Hm8ZAXeXCxsyjNBQhzhYqMaN_4zS4gUD_ucRFH677WixsXHoYEPF5bvZ0LoeamFHtld7rQuUZrZItuGNgs8Yv_jV8dyRPcF-TIaQFTpbjY0zziY4Dusxhu-Lg"/>
+<img alt="Paypal" class="h-5 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLjaSWUgcq19ilB8b30SWBkGYsqCoKw9zUS2_AtsObkHze15dTcmImxe2yjFKWy0r23CuCgt4VYuxq1gPDzndSi6pYv7n35ljFyRm9l13wBk4pMo1Yb2SGIdKp_dvxtw_RhGvEOiq5pRq7IxzdNX72Q7oO5VTDshHHV84kQwrx5Oksei5G4LaKh5K9FkEwpptGsHDjMRpYZi-33AZKyCp9D1vy_rJJoCGhIIHys1eRAseFllS4CWKHU__rd1scvogBUWm1o_w0SHo"/>
+</div>
+<div class="mt-6 flex items-center justify-center gap-2 text-xs text-secondary">
+<span class="material-icons text-sm">lock</span>
+<span>Secure SSL Encrypted Transaction</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-surface-sidebar border-t border-border py-12 mt-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-sm text-text-muted">
+<div class="mb-6 md:mb-0 font-serif text-lg text-primary">
+            © 2024 Saree Vastra.
+        </div>
+<div class="flex space-x-8">
+<a class="hover:text-primary transition-colors uppercase tracking-widest text-xs" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors uppercase tracking-widest text-xs" href="#">Terms</a>
+<a class="hover:text-primary transition-colors uppercase tracking-widest text-xs" href="#">Returns</a>
+</div>
+</div>
+</footer>
+
+</body></html>

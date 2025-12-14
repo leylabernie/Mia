@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ethnic Vibes - Luxury Collection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#C5A880", // Elegant Gold/Beige for accents
+              "primary-dark": "#A68B66",
+              "background-light": "#FAF9F6", // Off-white/Cream
+              "background-dark": "#1a1a1a", // Soft charcoal for dark mode
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#262626",
+              "text-main-light": "#333333",
+              "text-main-dark": "#E5E5E5",
+              "text-muted-light": "#666666",
+              "text-muted-dark": "#A3A3A3",
+              "pastel-pink": "#FCECEC",
+              "pastel-blue": "#EBF5FB",
+              "pastel-green": "#EDF7ED",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["Lato", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              'none': '0',
+              'sm': '0.125rem',
+              'md': '0.375rem',
+              'lg': '0.5rem',
+              'xl': '0.75rem',
+            },
+          },
+        },
+      };
+    </script>
+<style>::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: #4b5563;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body text-text-main-light dark:text-text-main-dark transition-colors duration-300 antialiased">
+<div class="bg-primary text-white text-center py-2 text-xs uppercase tracking-widest font-semibold px-4">
+        Festive Collection - Up to 40% Off • <a class="underline hover:text-gray-100 ml-1" href="#">Shop Now</a>
+</div>
+<nav class="sticky top-0 z-50 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center">
+<a class="font-display text-2xl font-bold tracking-tight text-gray-900 dark:text-white" href="#">
+                        ETHNIC<span class="text-primary italic">VIBES</span>
+</a>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sarees</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Kurtas</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Lehengas</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Men's Ethnic</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
+</div>
+<div class="flex items-center space-x-6">
+<div class="relative hidden sm:block group">
+<input class="bg-transparent border-b border-gray-300 dark:border-gray-600 focus:border-primary dark:focus:border-primary outline-none text-sm py-1 pr-8 w-40 transition-all group-hover:w-56 placeholder-gray-400 dark:placeholder-gray-500" placeholder="Search..." type="text"/>
+<span class="material-icons-outlined absolute right-0 top-1 text-gray-400 text-lg">search</span>
+</div>
+<button class="hover:text-primary transition-colors"><span class="material-icons-outlined">person_outline</span></button>
+<button class="relative hover:text-primary transition-colors">
+<span class="material-icons-outlined">shopping_bag</span>
+<span class="absolute -top-1.5 -right-1.5 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">2</span>
+</button>
+<button class="hover:text-primary transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-outlined">dark_mode</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+<nav aria-label="Breadcrumb" class="flex text-xs text-text-muted-light dark:text-text-muted-dark">
+<ol class="flex items-center space-x-2">
+<li><a class="hover:text-primary" href="#">Home</a></li>
+<li><span class="text-gray-300 dark:text-gray-600">/</span></li>
+<li><a class="hover:text-primary" href="#">Ethnic Wear</a></li>
+<li><span class="text-gray-300 dark:text-gray-600">/</span></li>
+<li class="font-medium text-primary">Sarees</li>
+</ol>
+</nav>
+</div>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+<div class="flex flex-col lg:flex-row gap-12">
+<aside class="w-full lg:w-64 flex-shrink-0 hidden lg:block">
+<div class="sticky top-24 space-y-10">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-display text-xl font-semibold">Filter By</h2>
+<button class="text-xs text-text-muted-light dark:text-text-muted-dark underline hover:text-primary">Reset</button>
+</div>
+<div class="border-b border-gray-100 dark:border-gray-800 pb-6">
+<h3 class="font-medium mb-4 flex justify-between items-center cursor-pointer group">
+                            Category
+                            <span class="material-icons-outlined text-sm group-hover:text-primary transition-colors">remove</span>
+</h3>
+<div class="space-y-3">
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input class="form-checkbox h-4 w-4 text-primary border-gray-300 dark:border-gray-600 rounded-sm focus:ring-primary dark:bg-surface-dark transition duration-150 ease-in-out" type="checkbox"/>
+<span class="text-sm text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors">Silk Saree</span>
+</label>
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input class="form-checkbox h-4 w-4 text-primary border-gray-300 dark:border-gray-600 rounded-sm focus:ring-primary dark:bg-surface-dark transition duration-150 ease-in-out" type="checkbox"/>
+<span class="text-sm text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors">Cotton Saree</span>
+</label>
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input class="form-checkbox h-4 w-4 text-primary border-gray-300 dark:border-gray-600 rounded-sm focus:ring-primary dark:bg-surface-dark transition duration-150 ease-in-out" type="checkbox"/>
+<span class="text-sm text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors">Georgette Saree</span>
+</label>
+</div>
+</div>
+<div class="border-b border-gray-100 dark:border-gray-800 pb-6">
+<h3 class="font-medium mb-4 flex justify-between items-center cursor-pointer group">
+                            Price Range
+                            <span class="material-icons-outlined text-sm group-hover:text-primary transition-colors">remove</span>
+</h3>
+<div class="space-y-4">
+<div class="relative pt-1">
+<div class="overflow-hidden h-1 text-xs flex rounded bg-gray-200 dark:bg-gray-700">
+<div class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-primary" style="width: 30%"></div>
+</div>
+<div class="flex justify-between mt-4 gap-2">
+<input class="w-full text-xs p-2 text-center border border-gray-200 dark:border-gray-700 bg-transparent rounded dark:text-gray-300" type="text" value="₹1,000"/>
+<span class="text-gray-400">-</span>
+<input class="w-full text-xs p-2 text-center border border-gray-200 dark:border-gray-700 bg-transparent rounded dark:text-gray-300" type="text" value="₹25,000"/>
+</div>
+</div>
+</div>
+</div>
+<div class="border-b border-gray-100 dark:border-gray-800 pb-6">
+<h3 class="font-medium mb-4 flex justify-between items-center cursor-pointer group">
+                            Size
+                            <span class="material-icons-outlined text-sm group-hover:text-primary transition-colors">remove</span>
+</h3>
+<div class="flex flex-wrap gap-2">
+<button class="w-10 h-10 rounded border border-gray-200 dark:border-gray-700 text-xs hover:border-primary hover:text-primary dark:hover:border-primary transition-all">S</button>
+<button class="w-10 h-10 rounded border border-gray-200 dark:border-gray-700 text-xs hover:border-primary hover:text-primary dark:hover:border-primary transition-all">M</button>
+<button class="w-10 h-10 rounded bg-primary text-white text-xs border border-primary transition-all">L</button>
+<button class="w-10 h-10 rounded border border-gray-200 dark:border-gray-700 text-xs hover:border-primary hover:text-primary dark:hover:border-primary transition-all">XL</button>
+</div>
+</div>
+<div class="pb-6">
+<h3 class="font-medium mb-4 flex justify-between items-center cursor-pointer group">
+                            Color
+                            <span class="material-icons-outlined text-sm group-hover:text-primary transition-colors">remove</span>
+</h3>
+<div class="flex flex-wrap gap-3">
+<button class="w-6 h-6 rounded-full bg-red-500 hover:ring-2 ring-offset-2 ring-red-300 dark:ring-offset-gray-900 transition-all"></button>
+<button class="w-6 h-6 rounded-full bg-blue-700 hover:ring-2 ring-offset-2 ring-blue-300 dark:ring-offset-gray-900 transition-all"></button>
+<button class="w-6 h-6 rounded-full bg-green-700 hover:ring-2 ring-offset-2 ring-green-300 dark:ring-offset-gray-900 transition-all"></button>
+<button class="w-6 h-6 rounded-full bg-primary hover:ring-2 ring-offset-2 ring-primary dark:ring-offset-gray-900 transition-all"></button>
+<button class="w-6 h-6 rounded-full bg-pink-500 hover:ring-2 ring-offset-2 ring-pink-300 dark:ring-offset-gray-900 transition-all"></button>
+<button class="w-6 h-6 rounded-full bg-black border border-gray-200 dark:border-gray-600 hover:ring-2 ring-offset-2 ring-gray-400 dark:ring-offset-gray-900 transition-all"></button>
+</div>
+</div>
+</div>
+</aside>
+<div class="flex-1">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Showing <span class="font-semibold text-text-main-light dark:text-text-main-dark">12</span> of <span class="font-semibold text-text-main-light dark:text-text-main-dark">48</span> products</p>
+<div class="flex items-center space-x-4">
+<div class="relative group">
+<button class="flex items-center space-x-2 text-sm font-medium border-b border-transparent hover:border-primary pb-1 transition-all">
+<span>Sort by: Relevance</span>
+<span class="material-icons-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-surface-dark shadow-xl rounded-md py-2 hidden group-hover:block z-20 border border-gray-100 dark:border-gray-700">
+<a class="block px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700" href="#">New Arrivals</a>
+<a class="block px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700" href="#">Price: Low to High</a>
+<a class="block px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700" href="#">Price: High to Low</a>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12" id="product-grid">
+<div class="group relative flex flex-col">
+<div class="aspect-[3/4] overflow-hidden rounded-md bg-gray-100 dark:bg-gray-800 relative">
+<img alt="Royal Blue Banarasi Silk Saree" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTD2HPbqP6q5F_9HIDmFEOLTfW_K-KJ22wMq7-9JkZ_OX9cQJ_UTJe6kP9R6YoD2VNMo97zK8GRs5dtGhoBIsHZcHWhDa2RuaJ4a8ULk6tPhSnM08hpT3ZTRhc9S2ZE2QIAlbPDd7No_uHTrMX7ERPN5dCsmRMPQ4nIy2mMmMcwAsS3BzLk3ZY7ryNeEfDyyAOsgUFnPRSamqMWvTAWPrBt6PDOLA6Y0RgmfnaAgaCvj3y_fqVI1KeavNsw-M1OkIQ5PqsFbFHG3A"/>
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col gap-2">
+<button class="w-full bg-white/90 dark:bg-surface-dark/90 backdrop-blur text-sm py-3 px-4 uppercase tracking-wider hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors shadow-lg">
+                                    Quick View
+                                </button>
+</div>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/40 rounded-full hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-icons-outlined text-gray-600 dark:text-gray-300 text-lg">favorite_border</span>
+</button>
+<span class="absolute top-3 left-3 bg-red-800 text-white text-[10px] px-2 py-1 uppercase tracking-widest font-semibold">30% OFF</span>
+</div>
+<div class="mt-4 flex flex-col flex-1">
+<h3 class="text-base font-display text-text-main-light dark:text-text-main-dark font-medium leading-tight mb-1">
+<a href="#">Royal Blue Banarasi Silk</a>
+</h3>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mb-2">Handwoven with zari work</p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-baseline space-x-2">
+<p class="text-lg font-bold text-primary">₹8,999</p>
+<p class="text-sm text-gray-400 line-through decoration-gray-400">₹12,500</p>
+</div>
+</div>
+<button class="mt-3 w-full border border-gray-300 dark:border-gray-600 py-2 text-xs uppercase tracking-widest hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:text-white transition-all duration-300">
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<div class="group relative flex flex-col">
+<div class="aspect-[3/4] overflow-hidden rounded-md bg-gray-100 dark:bg-gray-800 relative">
+<img alt="Peach Anarkali Suit" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfmqMcFes41lGLiRE1OIYMpTBDPD5YCcxOuMUp2eaWLERjJQgUztw9rHQxLx8tDShD5zBtmcWfwbnYCI5La8wITwMSXch4_L8tHgq59ekBStgdoMms3B21YSjrJUHO3fyBbil29UdTihaZjSmFgNYLzmIyz4MjDwOz6skKQrzbFXQACD88Ve4o5wpg5vp59_MfxUAOLJQ0NMzg05zYkSVXZ6JKGStnvyoqwbg96o4yFmtrm_JdSUH2I93g5QkblQNMU2Hln6GWm2Q"/>
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col gap-2">
+<button class="w-full bg-white/90 dark:bg-surface-dark/90 backdrop-blur text-sm py-3 px-4 uppercase tracking-wider hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors shadow-lg">
+                                    Quick View
+                                </button>
+</div>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/40 rounded-full hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-icons-outlined text-gray-600 dark:text-gray-300 text-lg">favorite_border</span>
+</button>
+<span class="absolute top-3 left-3 bg-primary text-white text-[10px] px-2 py-1 uppercase tracking-widest font-semibold">New</span>
+</div>
+<div class="mt-4 flex flex-col flex-1">
+<h3 class="text-base font-display text-text-main-light dark:text-text-main-dark font-medium leading-tight mb-1">
+<a href="#">Anarkali Sutton Suit</a>
+</h3>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mb-2">Detailed embroidery finish</p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-baseline space-x-2">
+<p class="text-lg font-bold text-primary">₹14,999</p>
+</div>
+</div>
+<button class="mt-3 w-full border border-gray-300 dark:border-gray-600 py-2 text-xs uppercase tracking-widest hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:text-white transition-all duration-300">
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<div class="group relative flex flex-col">
+<div class="aspect-[3/4] overflow-hidden rounded-md bg-gray-100 dark:bg-gray-800 relative">
+<img alt="Bridal Lehenga" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAhU0RxrtdWa7aXmBLLWcjemaErsy0hbscwhA2o6DZZEEMngqBjIP4VcADGrvBygNzEHKEqYUIrz7u2Mcoe33lOWkVuct0DsJpaOSNoTUuuFfLvrt-eZppS12nXzTAYtLZL7nRJ6QmumwJH-1Qr21Qbue_aeA6HpZ6V3GjhLeCp1thRZddKAwB2ozwLHSGX90y_IL0BP0PIQr0TId-gdXQS4sVCzT66g4rR9U-YJSyRRZMmkUvc4h6DjPAL3G8oMbuI1mbMCOuH_U"/>
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col gap-2">
+<button class="w-full bg-white/90 dark:bg-surface-dark/90 backdrop-blur text-sm py-3 px-4 uppercase tracking-wider hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors shadow-lg">
+                                    Quick View
+                                </button>
+</div>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/40 rounded-full hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-icons-outlined text-gray-600 dark:text-gray-300 text-lg">favorite_border</span>
+</button>
+</div>
+<div class="mt-4 flex flex-col flex-1">
+<h3 class="text-base font-display text-text-main-light dark:text-text-main-dark font-medium leading-tight mb-1">
+<a href="#">Bridal Lehenga Lavenda</a>
+</h3>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mb-2">Premium velvet collection</p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-baseline space-x-2">
+<p class="text-lg font-bold text-primary">₹32,499</p>
+<p class="text-sm text-gray-400 line-through decoration-gray-400">₹45,000</p>
+</div>
+</div>
+<button class="mt-3 w-full border border-gray-300 dark:border-gray-600 py-2 text-xs uppercase tracking-widest hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:text-white transition-all duration-300">
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<div class="group relative flex flex-col">
+<div class="aspect-[3/4] overflow-hidden rounded-md bg-gray-100 dark:bg-gray-800 relative">
+<img alt="Turquoise Silk Saree" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOXgYoF5uSKMMz_97yEjgkQeZl3vmliprakH8Y-7R5WOWhl2U4txUQMvLw89RNRPdpw3fU4S39wUmvYGbf_70YqQAt0T_STpWTxpndYzIWHmWFXKNTUc-OKDlpb10X-ubJpMf8jf4sEwIWPBbDyoyyII1DSbYiQ9T8laky_rP3lEIlr8knd8kjBqoZFGhHrlAr0S6bWPI9FJwaF85-2MS2w7cpnMONqLnfM3EwwYqhwJmHiBJHcDsV-XHqy3W55ZQ6wGnhf8qINoQ"/>
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col gap-2">
+<button class="w-full bg-white/90 dark:bg-surface-dark/90 backdrop-blur text-sm py-3 px-4 uppercase tracking-wider hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors shadow-lg">
+                                    Quick View
+                                </button>
+</div>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/40 rounded-full hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-icons-outlined text-gray-600 dark:text-gray-300 text-lg">favorite_border</span>
+</button>
+<span class="absolute top-3 left-3 bg-red-800 text-white text-[10px] px-2 py-1 uppercase tracking-widest font-semibold">15% OFF</span>
+</div>
+<div class="mt-4 flex flex-col flex-1">
+<h3 class="text-base font-display text-text-main-light dark:text-text-main-dark font-medium leading-tight mb-1">
+<a href="#">Turquoise Banarasi Silk</a>
+</h3>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mb-2">Soft silk with border</p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-baseline space-x-2">
+<p class="text-lg font-bold text-primary">₹7,650</p>
+<p class="text-sm text-gray-400 line-through decoration-gray-400">₹9,000</p>
+</div>
+</div>
+<button class="mt-3 w-full border border-gray-300 dark:border-gray-600 py-2 text-xs uppercase tracking-widest hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:text-white transition-all duration-300">
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<div class="group relative flex flex-col">
+<div class="aspect-[3/4] overflow-hidden rounded-md bg-gray-100 dark:bg-gray-800 relative">
+<img alt="Red Bridal Saree" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvcmaY-7luyAu6P8qfYEb9eUHI-tSXsLRObszOX3xpPO_15TaPxV_wugUc5BORft1Yow9t1inm8-ZGAgKa-NMEM-NAAUrPWGuwGlzYVDb1bfzCGAnFyIXGqITquxkFCTx5FPnbss4Rej1tQe8oZjvEtZMnMFeojey3xDM3juvjMnKlDeZYfzV4yZjsIMtZBs4taFxY45LAN3zgxdYJxA8dN3eDTBWvcnGd5bZw5BK4HKN6tccOhaNHQ9K2SPnfCe5RhmIwRnHW75k"/>
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col gap-2">
+<button class="w-full bg-white/90 dark:bg-surface-dark/90 backdrop-blur text-sm py-3 px-4 uppercase tracking-wider hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors shadow-lg">
+                                    Quick View
+                                </button>
+</div>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/40 rounded-full hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-icons-outlined text-gray-600 dark:text-gray-300 text-lg">favorite_border</span>
+</button>
+</div>
+<div class="mt-4 flex flex-col flex-1">
+<h3 class="text-base font-display text-text-main-light dark:text-text-main-dark font-medium leading-tight mb-1">
+<a href="#">Maharani Red Silk</a>
+</h3>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mb-2">Traditional wedding collection</p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-baseline space-x-2">
+<p class="text-lg font-bold text-primary">₹18,500</p>
+</div>
+</div>
+<button class="mt-3 w-full border border-gray-300 dark:border-gray-600 py-2 text-xs uppercase tracking-widest hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:text-white transition-all duration-300">
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<div class="group relative flex flex-col">
+<div class="aspect-[3/4] overflow-hidden rounded-md bg-gray-100 dark:bg-gray-800 relative">
+<img alt="Gold Tissue Saree" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDExPNeHLgHPHg3KNyAOfpfGjzL9ZaEsbhvrlVhpYcNyo09MhkCnsZAdBGbc3GPwViJ1pc77X5MzORoUC7PjXW_KjLvF6SMGPUAAofLgI7h-omm3LQ60XX7dJMbJf32NRTgvvZfmJI2n4Fdl9Txd4_I_XCsBVnj3_JLhWfHwRoL2Bm71baLWgDuF_6soCmNsht2TDGmWlPpvfC5s6bqtXOQ9z75ki-1UNRyTm83e2aW03YOEo879dyn7zmClAXLKjcQYEdN1wMPawM"/>
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col gap-2">
+<button class="w-full bg-white/90 dark:bg-surface-dark/90 backdrop-blur text-sm py-3 px-4 uppercase tracking-wider hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors shadow-lg">
+                                    Quick View
+                                </button>
+</div>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/40 rounded-full hover:bg-white dark:hover:bg-black transition-colors">
+<span class="material-icons-outlined text-gray-600 dark:text-gray-300 text-lg">favorite_border</span>
+</button>
+</div>
+<div class="mt-4 flex flex-col flex-1">
+<h3 class="text-base font-display text-text-main-light dark:text-text-main-dark font-medium leading-tight mb-1">
+<a href="#">Antique Gold Tissue</a>
+</h3>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mb-2">Festive shimmer finish</p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-baseline space-x-2">
+<p class="text-lg font-bold text-primary">₹11,200</p>
+</div>
+</div>
+<button class="mt-3 w-full border border-gray-300 dark:border-gray-600 py-2 text-xs uppercase tracking-widest hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:text-white transition-all duration-300">
+                                Add to Cart
+                            </button>
+</div>
+</div>
+</div>
+<div class="mt-16 flex justify-center">
+<nav aria-label="Pagination" class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
+<a class="relative inline-flex items-center px-4 py-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-surface-dark text-sm font-medium text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-l-md" href="#">
+                            Previous
+                        </a>
+<a aria-current="page" class="relative inline-flex items-center px-4 py-2 border border-primary bg-primary/10 text-sm font-medium text-primary" href="#">
+                            1
+                        </a>
+<a class="relative inline-flex items-center px-4 py-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-surface-dark text-sm font-medium text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800" href="#">
+                            2
+                        </a>
+<a class="relative inline-flex items-center px-4 py-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-surface-dark text-sm font-medium text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800" href="#">
+                            3
+                        </a>
+<a class="relative inline-flex items-center px-4 py-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-surface-dark text-sm font-medium text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-r-md" href="#">
+                            Next
+                        </a>
+</nav>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<a class="font-display text-2xl font-bold tracking-tight text-gray-900 dark:text-white block mb-6" href="#">
+                        ETHNIC<span class="text-primary italic">VIBES</span>
+</a>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                        Redefining Indian ethnic wear with a blend of tradition and modern elegance. Handcrafted for the woman of today.
+                    </p>
+<div class="flex space-x-4 mt-6">
+<a class="text-gray-400 hover:text-primary" href="#"><i class="material-icons-outlined text-xl">facebook</i></a>
+<a class="text-gray-400 hover:text-primary" href="#"><i class="material-icons-outlined text-xl">camera_alt</i></a>
+<a class="text-gray-400 hover:text-primary" href="#"><i class="material-icons-outlined text-xl">smart_display</i></a>
+</div>
+</div>
+<div>
+<h4 class="font-display font-semibold text-lg mb-6">Help &amp; Support</h4>
+<ul class="space-y-3 text-sm text-text-muted-light dark:text-text-muted-dark">
+<li><a class="hover:text-primary transition-colors" href="#">Help &amp; Support</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Track Order</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns &amp; Exchanges</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-semibold text-lg mb-6">Company</h4>
+<ul class="space-y-3 text-sm text-text-muted-light dark:text-text-muted-dark">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Stores</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-semibold text-lg mb-6">Subscribe</h4>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark mb-4">Subscribe for our latest collections and exclusive offers.</p>
+<form class="flex flex-col gap-3">
+<input class="w-full bg-white dark:bg-background-dark border border-gray-300 dark:border-gray-700 px-4 py-2 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Your email address" type="email"/>
+<button class="bg-primary text-white text-sm font-semibold py-2 px-4 hover:bg-primary-dark transition-colors uppercase tracking-widest" type="button">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">© 2023 Ethnic Vibes. All Rights Reserved.</p>
+<div class="flex space-x-4 text-xs text-text-muted-light dark:text-text-muted-dark">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="js/script.js"></script>
+</body></html>

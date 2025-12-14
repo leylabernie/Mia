@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aavanya - My Account</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        // User Provided Palette
+                        "pastel-snow": "#FCF8F8",    // Main Background
+                        "pastel-mist": "#FBEFEF",    // Section Backgrounds / Light Pinkish
+                        "pastel-blush": "#F9DFDF",   // Hovers / Pale Pink
+                        "pastel-salmon": "#F5AFAF",  // Accents / Buttons / Active
+                        "pastel-cream": "#FBF3D5",   // Tags / Highlights
+                        "pastel-sage": "#D6DAC8",    // Borders
+                        "pastel-blue": "#9CAFAA",    // Icons / Strong Text / Primary Brand Element
+                        // Semantic Mapping
+                        primary: "#9CAFAA",
+                        secondary: "#F5AFAF",
+                        "background-light": "#FCF8F8",
+                        "background-dark": "#1a1a1a",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#2d2d2d",
+                        "text-main-light": "#4A4A4A",
+                        "text-sub-light": "#6B7280",
+                        "text-main-dark": "#E0E0E0",
+                        "border-light": "#D6DAC8", // Explicitly using the sage color for borders
+                        "border-dark": "#404040",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Lato", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "4px",
+                        'lg': '8px',
+                        'xl': '12px',
+                        '2xl': '16px',
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #D6DAC8;border-radius: 20px;
+        }
+        .luxury-shadow {
+            box-shadow: 0 10px 40px -10px rgba(156, 175, 170, 0.15);}
+        .luxury-input {
+            transition: all 0.3s ease;
+        }
+        .luxury-input:focus {
+            border-color: #9CAFAA;
+            box-shadow: 0 0 0 1px rgba(156, 175, 170, 0.2);
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="bg-pastel-snow dark:bg-background-dark font-body text-text-main-light dark:text-text-main-dark transition-colors duration-300">
+<nav class="bg-surface-light dark:bg-surface-dark border-b border-pastel-sage dark:border-border-dark sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-24">
+<div class="flex-shrink-0 flex items-center">
+<a class="font-display text-4xl text-primary font-bold tracking-wider" href="#">
+                        Aavanya
+                        <span class="block text-[10px] text-text-sub-light dark:text-gray-400 font-body font-normal tracking-[0.3em] text-center -mt-1 uppercase">Boutique</span>
+</a>
+</div>
+<div class="hidden md:flex space-x-10 items-center">
+<a class="text-text-main-light dark:text-gray-300 hover:text-secondary dark:hover:text-primary px-1 py-2 text-sm uppercase tracking-widest font-normal transition-colors" href="#">Home</a>
+<a class="text-text-main-light dark:text-gray-300 hover:text-secondary dark:hover:text-primary px-1 py-2 text-sm uppercase tracking-widest font-normal transition-colors" href="#">Sarees</a>
+<a class="text-text-main-light dark:text-gray-300 hover:text-secondary dark:hover:text-primary px-1 py-2 text-sm uppercase tracking-widest font-normal transition-colors" href="#">Lehengas</a>
+<a class="text-text-main-light dark:text-gray-300 hover:text-secondary dark:hover:text-primary px-1 py-2 text-sm uppercase tracking-widest font-normal transition-colors" href="#">Kurtas</a>
+<a class="text-text-main-light dark:text-gray-300 hover:text-secondary dark:hover:text-primary px-1 py-2 text-sm uppercase tracking-widest font-normal transition-colors" href="#">About Us</a>
+</div>
+<div class="flex items-center space-x-6">
+<div class="relative hidden sm:block">
+<input class="pl-10 pr-4 py-2 border-b border-pastel-sage dark:border-gray-600 focus:border-secondary dark:focus:border-primary focus:outline-none bg-transparent text-sm w-48 placeholder-gray-400 dark:placeholder-gray-500 transition-colors" placeholder="Search..." type="text"/>
+<span class="material-icons-outlined absolute left-0 top-2 text-pastel-sage text-xl">search</span>
+</div>
+<a class="text-secondary border-b border-secondary pb-0.5 text-sm font-medium tracking-wide" href="#">My Account</a>
+<a class="text-text-main-light dark:text-gray-300 hover:text-secondary transition-colors relative" href="#">
+<span class="material-icons-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 h-2 w-2 bg-pastel-salmon rounded-full"></span>
+</a>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex items-center text-xs text-text-sub-light dark:text-gray-400 mb-10 uppercase tracking-widest">
+<a class="hover:text-secondary" href="#">Home</a>
+<span class="mx-3 text-pastel-sage">/</span>
+<span class="text-primary font-medium">My Account</span>
+</div>
+<div class="flex flex-col lg:flex-row gap-10">
+<aside class="w-full lg:w-1/4 flex-shrink-0">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl luxury-shadow overflow-hidden sticky top-32 border border-pastel-mist">
+<div class="bg-gradient-to-br from-pastel-mist to-pastel-blush dark:from-[#3a3a3a] dark:to-[#2d2d2d] p-8 text-center border-b border-pastel-sage dark:border-border-dark">
+<div class="relative inline-block">
+<img alt="Anjali Sharma" class="h-24 w-24 rounded-full object-cover border-4 border-white dark:border-gray-600 shadow-sm mx-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8iRm5cyff1PuyCP34Gd5y_upF4DTmb8YrQfMO2jg3eKUolQU_P8oj6ry0tke5tA8rjjTxWXrsLwaTfkMexIO1r1pfwrnPLf-SZDbYCY1ZJrGo7iOjXkhbtTIE5MEX8iiLbKmYd6t2V_mLiZSYXk5gCrEqaExyOkEhynS0CE7-dgSho--C9wfOq41C5j1vU7ciOZ5lrUXHgKsQvZYsjNSkzTZN6a42hz3dswlo6R4Nir56-6x_xr3qEbJQkimmdsHHwDOpGahI6sM"/>
+<button class="absolute bottom-0 right-0 bg-secondary text-white p-1.5 rounded-full shadow-md hover:bg-opacity-90 transition-colors border-2 border-white">
+<span class="material-icons-outlined text-xs">edit</span>
+</button>
+</div>
+<h2 class="mt-4 text-xl font-display font-medium text-gray-900 dark:text-white tracking-wide">Anjali Sharma</h2>
+<p class="text-xs uppercase tracking-widest text-text-sub-light dark:text-gray-400 mt-2">Premium Member</p>
+</div>
+<nav class="p-4 space-y-2">
+<a class="flex items-center px-4 py-3 text-sm font-medium text-text-main-light dark:text-gray-300 rounded-lg hover:bg-pastel-mist dark:hover:bg-gray-700 hover:text-primary dark:hover:text-white transition-all group" href="#orders">
+<span class="material-icons-outlined mr-4 text-pastel-sage group-hover:text-primary transition-colors">shopping_bag</span>
+                            My Orders
+                        </a>
+<a class="flex items-center px-4 py-3 text-sm font-medium text-primary dark:text-white bg-pastel-snow dark:bg-gray-700/50 rounded-lg transition-all border border-pastel-mist shadow-sm" href="#personal">
+<span class="material-icons-outlined mr-4 text-secondary">person</span>
+                            Personal Details
+                        </a>
+<a class="flex items-center px-4 py-3 text-sm font-medium text-text-main-light dark:text-gray-300 rounded-lg hover:bg-pastel-mist dark:hover:bg-gray-700 hover:text-primary dark:hover:text-white transition-all group" href="#addresses">
+<span class="material-icons-outlined mr-4 text-pastel-sage group-hover:text-primary transition-colors">location_on</span>
+                            Addresses
+                        </a>
+<a class="flex items-center px-4 py-3 text-sm font-medium text-text-main-light dark:text-gray-300 rounded-lg hover:bg-pastel-mist dark:hover:bg-gray-700 hover:text-primary dark:hover:text-white transition-all group" href="#wishlist">
+<span class="material-icons-outlined mr-4 text-pastel-sage group-hover:text-primary transition-colors">favorite_border</span>
+                            Wishlist
+                        </a>
+<div class="border-t border-pastel-sage dark:border-border-dark my-3"></div>
+<a class="flex items-center px-4 py-3 text-sm font-medium text-pastel-salmon hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-all group" href="#">
+<span class="material-icons-outlined mr-4 text-pastel-salmon group-hover:text-red-600">logout</span>
+                            Log Out
+                        </a>
+</nav>
+<div class="p-6 bg-pastel-mist/30 dark:bg-gray-800/50 mt-2 border-t border-pastel-sage dark:border-border-dark">
+<p class="text-xs text-text-sub-light dark:text-gray-400 text-center uppercase tracking-widest">Concierge Service</p>
+<a class="block text-center text-sm font-medium text-primary mt-2 hover:text-secondary transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+</aside>
+<div class="flex-1 space-y-12">
+<section class="bg-surface-light dark:bg-surface-dark rounded-xl luxury-shadow p-8 border border-pastel-sage/50 dark:border-border-dark relative overflow-hidden" id="personal">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-pastel-blue"></div>
+<div class="flex justify-between items-end mb-8 border-b border-pastel-mist dark:border-border-dark pb-4">
+<div>
+<h3 class="text-2xl font-display text-gray-900 dark:text-white">Personal Details</h3>
+<p class="text-sm text-text-sub-light dark:text-gray-400 mt-2 font-light">Update your profile information and preferences.</p>
+</div>
+<button class="text-xs font-semibold uppercase tracking-widest text-primary hover:text-secondary transition-colors border-b border-transparent hover:border-secondary pb-0.5">Edit Details</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="block text-xs font-semibold text-primary dark:text-gray-400 uppercase tracking-widest">Full Name</label>
+<input class="w-full bg-pastel-snow dark:bg-gray-800 border-pastel-sage dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-0 focus:border-secondary luxury-input" disabled="" type="text" value="Anjali Sharma"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-semibold text-primary dark:text-gray-400 uppercase tracking-widest">Email Address</label>
+<input class="w-full bg-pastel-snow dark:bg-gray-800 border-pastel-sage dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-0 focus:border-secondary luxury-input" disabled="" type="email" value="anjali.sharma@email.com"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-semibold text-primary dark:text-gray-400 uppercase tracking-widest">Phone Number</label>
+<input class="w-full bg-pastel-snow dark:bg-gray-800 border-pastel-sage dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-0 focus:border-secondary luxury-input" disabled="" type="tel" value="+91 98765 43210"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-semibold text-primary dark:text-gray-400 uppercase tracking-widest">Date of Birth</label>
+<div class="relative">
+<input class="w-full bg-pastel-snow dark:bg-gray-800 border-pastel-sage dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-0 focus:border-secondary luxury-input" placeholder="DD/MM/YYYY" type="text"/>
+<span class="material-icons-outlined absolute right-3 top-3 text-pastel-sage">calendar_today</span>
+</div>
+</div>
+</div>
+<div class="mt-10 flex justify-end">
+<button class="bg-pastel-blue hover:bg-opacity-90 text-white px-10 py-3 rounded-lg text-sm font-medium tracking-wide transition-all shadow-lg shadow-pastel-blue/20">
+                            Save Changes
+                        </button>
+</div>
+</section>
+<section id="orders">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-2xl font-display text-gray-900 dark:text-white">Recent Orders</h3>
+<a class="text-xs font-semibold uppercase tracking-widest text-primary hover:text-secondary transition-colors" href="#">View All Orders</a>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl luxury-shadow overflow-hidden border border-pastel-sage/50 dark:border-border-dark">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-pastel-mist dark:bg-gray-800/50 text-xs uppercase text-text-sub-light dark:text-gray-400 font-semibold tracking-widest">
+<tr>
+<th class="px-6 py-5">Order #</th>
+<th class="px-6 py-5">Status</th>
+<th class="px-6 py-5">Date</th>
+<th class="px-6 py-5 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-pastel-sage dark:divide-border-dark">
+<tr class="hover:bg-pastel-snow dark:hover:bg-gray-800/30 transition-colors">
+<td class="px-6 py-5 font-medium text-gray-900 dark:text-white">#10234</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-pastel-sage/30 text-gray-700 dark:bg-green-900 dark:text-green-200">
+                                                Delivered
+                                            </span>
+</td>
+<td class="px-6 py-5 text-sm text-text-sub-light dark:text-gray-400">Oct 15, 2023</td>
+<td class="px-6 py-5 text-right">
+<button class="text-pastel-sage hover:text-primary transition-colors">
+<span class="material-icons-outlined">chevron_right</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-pastel-snow dark:hover:bg-gray-800/30 transition-colors">
+<td class="px-6 py-5 font-medium text-gray-900 dark:text-white">#10233</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-pastel-cream text-gray-700 dark:bg-blue-900 dark:text-blue-200">
+                                                Shipped
+                                            </span>
+</td>
+<td class="px-6 py-5 text-sm text-text-sub-light dark:text-gray-400">Oct 10, 2023</td>
+<td class="px-6 py-5 text-right">
+<button class="text-pastel-sage hover:text-primary transition-colors">
+<span class="material-icons-outlined">chevron_right</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-pastel-snow dark:hover:bg-gray-800/30 transition-colors">
+<td class="px-6 py-5 font-medium text-gray-900 dark:text-white">#10232</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-pastel-sage/30 text-gray-700 dark:bg-green-900 dark:text-green-200">
+                                                Delivered
+                                            </span>
+</td>
+<td class="px-6 py-5 text-sm text-text-sub-light dark:text-gray-400">Sep 28, 2023</td>
+<td class="px-6 py-5 text-right">
+<button class="text-pastel-sage hover:text-primary transition-colors">
+<span class="material-icons-outlined">chevron_right</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="addresses">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-2xl font-display text-gray-900 dark:text-white">Saved Addresses</h3>
+<button class="bg-white dark:bg-white text-primary border border-primary hover:bg-primary hover:text-white px-5 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-widest transition-all flex items-center shadow-sm">
+<span class="material-icons-outlined text-sm mr-2">add</span> Add New
+                        </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl border border-pastel-sage dark:border-border-dark luxury-shadow hover:border-pastel-salmon dark:hover:border-primary transition-colors group">
+<div class="flex justify-between items-start">
+<div class="flex items-center space-x-3">
+<div class="p-2 bg-pastel-mist rounded-full">
+<span class="material-icons-outlined text-primary group-hover:text-secondary transition-colors text-lg">home</span>
+</div>
+<h4 class="font-bold text-gray-900 dark:text-white font-display text-lg">Home</h4>
+</div>
+<span class="bg-pastel-cream text-gray-600 dark:text-gray-300 text-[10px] px-3 py-1 rounded-full uppercase tracking-wider font-bold">Default</span>
+</div>
+<p class="mt-6 text-sm text-text-sub-light dark:text-gray-300 leading-relaxed pl-12 border-l-2 border-pastel-mist">
+                                123, Green Park<br/>
+                                New Delhi, 110016<br/>
+                                India
+                            </p>
+<div class="mt-8 flex space-x-4 pt-4 border-t border-pastel-sage/30 dark:border-gray-700 pl-2">
+<button class="text-xs font-semibold text-primary hover:text-secondary transition-colors uppercase tracking-widest">Edit</button>
+<span class="text-pastel-sage">|</span>
+<button class="text-xs font-semibold text-text-sub-light hover:text-pastel-salmon transition-colors uppercase tracking-widest">Delete</button>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl border border-pastel-sage dark:border-border-dark luxury-shadow hover:border-pastel-salmon dark:hover:border-primary transition-colors group">
+<div class="flex justify-between items-start">
+<div class="flex items-center space-x-3">
+<div class="p-2 bg-pastel-snow rounded-full">
+<span class="material-icons-outlined text-pastel-sage group-hover:text-secondary transition-colors text-lg">business</span>
+</div>
+<h4 class="font-bold text-gray-900 dark:text-white font-display text-lg">Office</h4>
+</div>
+</div>
+<p class="mt-6 text-sm text-text-sub-light dark:text-gray-300 leading-relaxed pl-12 border-l-2 border-pastel-snow">
+                                456, Cyber City<br/>
+                                Gurugram, 122002<br/>
+                                India
+                            </p>
+<div class="mt-8 flex space-x-4 pt-4 border-t border-pastel-sage/30 dark:border-gray-700 pl-2">
+<button class="text-xs font-semibold text-primary hover:text-secondary transition-colors uppercase tracking-widest">Edit</button>
+<span class="text-pastel-sage">|</span>
+<button class="text-xs font-semibold text-text-sub-light hover:text-pastel-salmon transition-colors uppercase tracking-widest">Delete</button>
+</div>
+</div>
+</div>
+</section>
+<section id="wishlist">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-2xl font-display text-gray-900 dark:text-white">Wishlist Favorites</h3>
+<a class="text-xs font-semibold uppercase tracking-widest text-primary hover:text-secondary transition-colors" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="group relative">
+<div class="aspect-w-3 aspect-h-4 rounded-xl overflow-hidden bg-pastel-snow dark:bg-gray-700 border border-pastel-sage/30">
+<img alt="Banarasi Silk Saree" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQmk3uvb8ydTGIgPGPcFs7rzeB7GPWhvzHY4YL2CaUN6t111kEzMgczTQDFkTPvmX3qHs8M3vnLHNArnFWKnXvFRHRVkHPIyOCyjM0qKbqnRYCnSXdivHQJ5TtHM8tJ6KqDY3N1UW9yYgQ3odpSw61yf_WxXKTT5DJAWkaaS-RJ567bTg2P7x3tOFJ6CkDOBIcKv6NG6dVBk7zpWmvn8TFKddPzVE9SNRvSDhiEiaRVET8Xd2m7xU0Dcf2nGQEjhRHnXL_uMNjN_4"/>
+<div class="absolute top-3 right-3">
+<button class="bg-white/95 dark:bg-black/50 rounded-full p-2 hover:bg-pastel-blush dark:hover:bg-black text-secondary transition-all shadow-sm">
+<span class="material-icons-outlined text-lg">favorite</span>
+</button>
+</div>
+</div>
+<div class="mt-4 text-center">
+<h4 class="text-sm font-medium text-gray-900 dark:text-white line-clamp-1 font-display tracking-wide">Banarasi Silk Saree</h4>
+<p class="text-[10px] uppercase tracking-widest text-text-sub-light dark:text-gray-400 mt-1">Red &amp; Gold</p>
+<p class="text-sm font-semibold text-primary dark:text-white mt-1">₹12,500</p>
+</div>
+</div>
+<div class="group relative">
+<div class="aspect-w-3 aspect-h-4 rounded-xl overflow-hidden bg-pastel-snow dark:bg-gray-700 border border-pastel-sage/30">
+<img alt="Chikankari Kurta Set" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATx59YE40MU5ro61VbZ7xoCYVwV-fD8ZtgqA7d74Pm2BF9xzhZ2qQNCDzR-CmtNerAYyMMpsvjOCFV0CeF832xdrVlWcDuBrKOunhGMnPIqVuLGVO36Di2yIZeVowvpeuuKVe2kNedt4VAHxFnjmkO796fsh1_ja9aPrpf-ekDo8ROx9IF9dtTaLncXBqybIh7tV6ZPrdJu4vfT69u2ehV98WmIPK7Mq7xq_LwRCsq1Qt-rRLmEHO6rwyn03FVTPM2s_lS28cGKyU"/>
+<div class="absolute top-3 right-3">
+<button class="bg-white/95 dark:bg-black/50 rounded-full p-2 hover:bg-pastel-blush dark:hover:bg-black text-secondary transition-all shadow-sm">
+<span class="material-icons-outlined text-lg">favorite</span>
+</button>
+</div>
+</div>
+<div class="mt-4 text-center">
+<h4 class="text-sm font-medium text-gray-900 dark:text-white line-clamp-1 font-display tracking-wide">Chikankari Kurta Set</h4>
+<p class="text-[10px] uppercase tracking-widest text-text-sub-light dark:text-gray-400 mt-1">Pure White</p>
+<p class="text-sm font-semibold text-primary dark:text-white mt-1">₹4,999</p>
+</div>
+</div>
+<div class="group relative">
+<div class="aspect-w-3 aspect-h-4 rounded-xl overflow-hidden bg-pastel-snow dark:bg-gray-700 border border-pastel-sage/30">
+<img alt="Banarasi Silk Saree" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc0jLpIS2VmK_c23YFED5gwtw3EFivM4r6__GzqqWQw0quscjhx3EIo-1iCXw5lEPlY16t3St8coFRaQesCqChTSy8RPkUEs1Esr6TIrd8olP7t4_YZu3SNZht020IPozM_CUS8pOOmxYwRoEK8M-AXI_f6VCVs3G-enjH00GAk9XbJpY5UGiz8rQgOD6RUy5veCViSWXfR69Z668TDVaf8SrM67OVapbdPF9xS8GczdcU0pGnHVkjr2UmQqUHYBuguXDq7BSLSUc"/>
+<div class="absolute top-3 right-3">
+<button class="bg-white/95 dark:bg-black/50 rounded-full p-2 hover:bg-pastel-blush dark:hover:bg-black text-secondary transition-all shadow-sm">
+<span class="material-icons-outlined text-lg">favorite</span>
+</button>
+</div>
+</div>
+<div class="mt-4 text-center">
+<h4 class="text-sm font-medium text-gray-900 dark:text-white line-clamp-1 font-display tracking-wide">Banarasi Silk Saree</h4>
+<p class="text-[10px] uppercase tracking-widest text-text-sub-light dark:text-gray-400 mt-1">Royal Blue</p>
+<p class="text-sm font-semibold text-primary dark:text-white mt-1">₹12,500</p>
+</div>
+</div>
+<div class="group relative">
+<div class="aspect-w-3 aspect-h-4 rounded-xl overflow-hidden bg-pastel-snow dark:bg-gray-700 border border-pastel-sage/30">
+<img alt="Chikankari Kurta Set" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVscdQINXL32TggGKDVdhtX8Tn7M0jQgLeXh-KniscOk743-_-4Dit3ILnzCR8vYxzlAOkOFDUlAWNBGLDMpwQYQi5t_0NVGHU_yPFd9cDqwaPMWSSg3Hxn8GPTgP4TRh2NdZwb9jOzPX-GVGh3havd2s_gLZBDv8UWsd4kLKgaTYBSUeZAqmKRvXvrlSX0sL-T4MGvEZXgFHrXc74YKXGnP2TZJEFuMOvbE0vMbWZmFT7vQSeh5lBSYULa0su7nTQOLb4uOUSlF4"/>
+<div class="absolute top-3 right-3">
+<button class="bg-white/95 dark:bg-black/50 rounded-full p-2 hover:bg-pastel-blush dark:hover:bg-black text-secondary transition-all shadow-sm">
+<span class="material-icons-outlined text-lg">favorite</span>
+</button>
+</div>
+</div>
+<div class="mt-4 text-center">
+<h4 class="text-sm font-medium text-gray-900 dark:text-white line-clamp-1 font-display tracking-wide">Chikankari Kurta Set</h4>
+<p class="text-[10px] uppercase tracking-widest text-text-sub-light dark:text-gray-400 mt-1">Pink</p>
+<p class="text-sm font-semibold text-primary dark:text-white mt-1">₹4,999</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-pastel-sage dark:border-border-dark mt-24 pt-16 pb-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<span class="font-display text-2xl text-primary font-bold tracking-wide">Aavanya</span>
+<p class="mt-6 text-sm text-text-sub-light dark:text-gray-400 leading-relaxed font-light">
+                        Experience the elegance of tradition with our curated collection of ethnic wear. Designed for the modern woman who cherishes her roots.
+                    </p>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Shop</h4>
+<ul class="space-y-3 text-sm text-text-sub-light dark:text-gray-400">
+<li><a class="hover:text-secondary transition-colors" href="#">Sarees</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Lehengas</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Kurtas</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">New Arrivals</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Help</h4>
+<ul class="space-y-3 text-sm text-text-sub-light dark:text-gray-400">
+<li><a class="hover:text-secondary transition-colors" href="#">Track Order</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Returns &amp; Exchanges</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Shipping Info</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Subscribe</h4>
+<p class="text-sm text-text-sub-light dark:text-gray-400 mb-4 font-light">Join our newsletter for exclusive offers and updates.</p>
+<div class="flex">
+<input class="flex-1 bg-pastel-snow dark:bg-gray-800 border border-pastel-sage dark:border-gray-700 rounded-l-lg px-4 py-2 text-sm focus:outline-none focus:border-secondary transition-colors" placeholder="Email Address" type="email"/>
+<button class="bg-pastel-blue text-white px-5 py-2 rounded-r-lg text-sm font-medium hover:bg-secondary transition-colors">Join</button>
+</div>
+</div>
+</div>
+<div class="border-t border-pastel-sage/50 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-xs text-text-sub-light dark:text-gray-500">© 2023 Aavanya Ethnic Wear. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a class="text-pastel-sage hover:text-secondary transition-colors text-lg" href="#"><span class="sr-only">Instagram</span><i class="fab fa-instagram"></i></a>
+<a class="text-pastel-sage hover:text-secondary transition-colors text-lg" href="#"><span class="sr-only">Facebook</span><i class="fab fa-facebook"></i></a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
