@@ -1,72 +1,4 @@
-
-<!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Indian Ethnic Wear - Cookie Consent</title>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Google Fonts: Manrope -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Theme Configuration -->
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#e6b24c",
-                        "background-light": "#f8f7f6",
-                        "background-dark": "#211c11",
-                        "surface-light": "#ffffff",
-                        "surface-dark": "#2a241b",
-                    },
-                    fontFamily: {
-                        "display": ["Manrope", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "2xl": "1rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-<style>
-        /* Custom utilities if needed */
-        body {
-            font-family: 'Manrope', sans-serif;
-        }
-    </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark text-[#1b160e] dark:text-[#f3efe8] min-h-screen flex flex-col font-display antialiased">
-<!-- Mock Navigation (Background Context) -->
-<header class="flex items-center justify-between px-6 py-4 md:px-12 border-b border-[#e6e2de] dark:border-[#3a3225]">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-2xl cursor-pointer">menu</span>
-<div class="text-xl font-bold tracking-wider uppercase">Veda &amp; Silk</div>
-</div>
-<div class="hidden md:flex gap-8 text-sm font-medium">
-<a class="hover:text-primary transition-colors" href="#">New Arrivals</a>
-<a class="hover:text-primary transition-colors" href="#">Sarees</a>
-<a class="hover:text-primary transition-colors" href="#">Lehengas</a>
-<a class="hover:text-primary transition-colors" href="#">Kurtas</a>
-</div>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-2xl cursor-pointer">search</span>
-<span class="material-symbols-outlined text-2xl cursor-pointer">favorite</span>
-<span class="material-symbols-outlined text-2xl cursor-pointer">shopping_bag</span>
-</div>
-</header>
+<%- include('partials/header') %>
 <!-- Mock Content (Hero Section) -->
 <main class="flex-grow flex flex-col items-center relative z-0">
 <!-- Hero Image Context -->
@@ -159,3 +91,4 @@
 </div>
 </div>
 </body></html>
+<%- include('partials/footer') %>

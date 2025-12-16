@@ -1,61 +1,4 @@
-
-<!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>New Visitor Discount Pop-up</title>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#4c4ce6",
-                        "background-light": "#f6f6f8",
-                        "background-dark": "#111121",
-                    },
-                    fontFamily: {
-                        "display": ["Manrope", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
-        /* Custom scrollbar for aesthetics */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-    </style>
-</head>
-<body class="font-display bg-background-light dark:bg-background-dark text-[#0e0e1b] dark:text-white antialiased">
-<!-- Main Content Simulation (Background Page) -->
-<div aria-hidden="true" class="relative min-h-screen w-full flex flex-col items-center justify-start pt-20 overflow-hidden opacity-50 blur-[2px] pointer-events-none select-none">
-<!-- Simulating a header -->
-<header class="w-full max-w-[1200px] flex justify-between items-center px-8 mb-12">
-<div class="w-32 h-8 bg-gray-300 dark:bg-gray-700 rounded"></div>
-<div class="flex gap-8">
-<div class="w-16 h-4 bg-gray-300 dark:bg-gray-700 rounded"></div>
-<div class="w-16 h-4 bg-gray-300 dark:bg-gray-700 rounded"></div>
-<div class="w-16 h-4 bg-gray-300 dark:bg-gray-700 rounded"></div>
-</div>
-</header>
+<%- include('partials/header') %>
 <!-- Simulating Hero Section -->
 <div class="w-full max-w-[1200px] h-[400px] bg-gray-200 dark:bg-gray-800 rounded-lg mb-12 flex items-center justify-center">
 <span class="text-gray-400 dark:text-gray-600">Site Content Placeholder</span>
@@ -140,3 +83,4 @@
         }
     </style>
 </body></html>
+<%- include('partials/footer') %>

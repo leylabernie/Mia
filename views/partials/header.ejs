@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aanya's Heritage - Luxury Anarkali Suit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8B2635", // Deep luxury maroon/red for primary actions
+                        "background-light": "#FDFBF7", // Very light cream/eggshell
+                        "background-dark": "#1C1C1E", // Dark charcoal for dark mode
+                        "surface-light": "#F4EFEA", // Slightly darker beige for cards/sections
+                        "surface-dark": "#2C2C2E", // Dark surface
+                        "text-main-light": "#3E2723", // Dark brown for text
+                        "text-main-dark": "#E5E5EA", // Light gray for dark mode text
+                        "gold": "#D4AF37", // Accent gold
+                    },
+                    fontFamily: {
+                        display: ["Cormorant Garamond", "serif"],
+                        body: ["Lato", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "2px", // Luxury brands often use sharper or very subtle rounded corners
+                    },
+                },
+            },
+        };
+    </script>
+<style>::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #D1D5DB;
+            border-radius: 20px;
+        }@keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+        }
+        .btn-animate:hover {
+            animation: pulse-gold 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark font-body transition-colors duration-300">
+<div class="bg-primary text-white text-xs text-center py-2 tracking-widest font-body uppercase">
+        Complimentary Shipping on International Orders Over $250
+    </div>
+<nav class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-stone-200 dark:border-stone-800 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center">
+<a class="font-display text-3xl font-semibold tracking-wide text-primary dark:text-white" href="/">
+                        Aanya's Heritage
+                    </a>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-sm uppercase tracking-widest hover:text-primary transition-colors" href="/products.html">New Arrivals</a>
+<a class="text-sm uppercase tracking-widest hover:text-primary transition-colors" href="/products.html">Women</a>
+<a class="text-sm uppercase tracking-widest hover:text-primary transition-colors" href="/products.html">Men</a>
+<a class="text-sm uppercase tracking-widest hover:text-primary transition-colors" href="/products.html">Kids</a>
+<a class="text-sm uppercase tracking-widest text-primary font-bold" href="/products.html">Sale</a>
+</div>
+<div class="flex items-center space-x-6 text-stone-600 dark:text-stone-300">
+<button class="hover:text-primary transition-colors">
+<span class="material-icons-outlined">search</span>
+</button>
+<a href="/account.html" class="hover:text-primary transition-colors">
+<span class="material-icons-outlined">person_outline</span>
+</a>
+<a href="/cart.html" class="hover:text-primary transition-colors relative">
+<span class="material-icons-outlined">shopping_bag</span>
+<span id="cart-count" class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+</a>
+</div>
+</div>
+</div>
+</nav>

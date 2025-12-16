@@ -1,97 +1,9 @@
-
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Aanya's Heritage - Luxury Anarkali Suit</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#8B2635", // Deep luxury maroon/red for primary actions
-                        "background-light": "#FDFBF7", // Very light cream/eggshell
-                        "background-dark": "#1C1C1E", // Dark charcoal for dark mode
-                        "surface-light": "#F4EFEA", // Slightly darker beige for cards/sections
-                        "surface-dark": "#2C2C2E", // Dark surface
-                        "text-main-light": "#3E2723", // Dark brown for text
-                        "text-main-dark": "#E5E5EA", // Light gray for dark mode text
-                        "gold": "#D4AF37", // Accent gold
-                    },
-                    fontFamily: {
-                        display: ["Cormorant Garamond", "serif"],
-                        body: ["Lato", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "2px", // Luxury brands often use sharper or very subtle rounded corners
-                    },
-                },
-            },
-        };
-    </script>
-<style>::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        ::-webkit-scrollbar-thumb {
-            background-color: #D1D5DB;
-            border-radius: 20px;
-        }@keyframes pulse-gold {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
-            50% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
-        }
-        .btn-animate:hover {
-            animation: pulse-gold 2s infinite;
-        }
-    </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark font-body transition-colors duration-300">
-<div class="bg-primary text-white text-xs text-center py-2 tracking-widest font-body uppercase">
-        Complimentary Shipping on International Orders Over $250
-    </div>
-<nav class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-stone-200 dark:border-stone-800 transition-colors duration-300">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between items-center h-20">
-<div class="flex-shrink-0 flex items-center">
-<a class="font-display text-3xl font-semibold tracking-wide text-primary dark:text-white" href="#">
-                        Aanya's Heritage
-                    </a>
-</div>
-<div class="hidden md:flex space-x-8 items-center">
-<a class="text-sm uppercase tracking-widest hover:text-primary transition-colors" href="#">New Arrivals</a>
-<a class="text-sm uppercase tracking-widest hover:text-primary transition-colors" href="#">Women</a>
-<a class="text-sm uppercase tracking-widest hover:text-primary transition-colors" href="#">Men</a>
-<a class="text-sm uppercase tracking-widest hover:text-primary transition-colors" href="#">Kids</a>
-<a class="text-sm uppercase tracking-widest text-primary font-bold" href="#">Sale</a>
-</div>
-<div class="flex items-center space-x-6 text-stone-600 dark:text-stone-300">
-<button class="hover:text-primary transition-colors">
-<span class="material-icons-outlined">search</span>
-</button>
-<button class="hover:text-primary transition-colors">
-<span class="material-icons-outlined">person_outline</span>
-</button>
-<button class="hover:text-primary transition-colors relative">
-<span class="material-icons-outlined">shopping_bag</span>
-<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
-</button>
-</div>
-</div>
-</div>
-</nav>
+<%- include('partials/header') %>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
 <nav class="flex text-xs text-stone-500 dark:text-stone-400 uppercase tracking-wider space-x-2">
-<a class="hover:text-primary" href="#">Home</a>
+<a class="hover:text-primary" href="/">Home</a>
 <span>/</span>
-<a class="hover:text-primary" href="#">Women</a>
+<a class="hover:text-primary" href="/products.html">Women</a>
 <span>/</span>
 <span class="text-stone-800 dark:text-stone-200 font-semibold">Anarkali Suits</span>
 </nav>
@@ -151,52 +63,27 @@
                     </p>
 </div>
 <div class="space-y-6">
-<div>
-<h3 class="text-sm font-bold text-stone-900 dark:text-stone-100 uppercase tracking-wider mb-3">Select Color</h3>
-<div class="flex space-x-3">
-<label class="relative -m-0.5 p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-offset-2 ring-primary ring-2">
-<input checked="" class="sr-only" name="color-choice" type="radio" value="Blue"/>
-<span aria-hidden="true" class="h-8 w-8 bg-[#1e3a8a] border border-black border-opacity-10 rounded-full"></span>
-</label>
-<label class="relative -m-0.5 p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-transparent ring-2 hover:ring-stone-300">
-<input class="sr-only" name="color-choice" type="radio" value="Maroon"/>
-<span aria-hidden="true" class="h-8 w-8 bg-[#4a0404] border border-black border-opacity-10 rounded-full"></span>
-</label>
-<label class="relative -m-0.5 p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-transparent ring-2 hover:ring-stone-300">
-<input class="sr-only" name="color-choice" type="radio" value="Green"/>
-<span aria-hidden="true" class="h-8 w-8 bg-[#064e3b] border border-black border-opacity-10 rounded-full"></span>
-</label>
-</div>
-</div>
-<div>
-<div class="flex justify-between items-center mb-3">
-<h3 class="text-sm font-bold text-stone-900 dark:text-stone-100 uppercase tracking-wider">Select Size</h3>
-<button class="flex items-center text-xs text-stone-500 hover:text-primary transition-colors border-b border-stone-300 pb-0.5">
-<span class="material-icons-outlined text-sm mr-1">straighten</span>
-                                Size Guide
-                            </button>
-</div>
-<div class="grid grid-cols-5 gap-3">
-<button class="group relative border border-stone-200 dark:border-stone-600 rounded-sm py-3 px-3 flex items-center justify-center text-sm font-medium uppercase hover:border-primary hover:text-primary sm:flex-1 bg-white dark:bg-stone-800 focus:outline-none">
-                                XS
-                            </button>
-<button class="group relative border border-stone-200 dark:border-stone-600 rounded-sm py-3 px-3 flex items-center justify-center text-sm font-medium uppercase hover:border-primary hover:text-primary sm:flex-1 bg-white dark:bg-stone-800 focus:outline-none">
-                                S
-                            </button>
-<button class="group relative border-2 border-primary rounded-sm py-3 px-3 flex items-center justify-center text-sm font-bold uppercase text-primary sm:flex-1 bg-white dark:bg-stone-800 focus:outline-none shadow-sm">
-                                M
-                            </button>
-<button class="group relative border border-stone-200 dark:border-stone-600 rounded-sm py-3 px-3 flex items-center justify-center text-sm font-medium uppercase hover:border-primary hover:text-primary sm:flex-1 bg-white dark:bg-stone-800 focus:outline-none">
-                                L
-                            </button>
-<button class="group relative border border-stone-200 dark:border-stone-600 rounded-sm py-3 px-3 flex items-center justify-center text-sm font-medium uppercase hover:border-primary hover:text-primary sm:flex-1 bg-white dark:bg-stone-800 focus:outline-none opacity-50 cursor-not-allowed">
-                                XL
-                            </button>
-</div>
-</div>
+    <div>
+        <h3 class="text-sm font-bold text-stone-900 dark:text-stone-100 uppercase tracking-wider mb-3">Select Color</h3>
+        <div id="color-options" class="flex space-x-3">
+            <!-- Color options will be dynamically inserted here -->
+        </div>
+    </div>
+    <div>
+        <div class="flex justify-between items-center mb-3">
+            <h3 class="text-sm font-bold text-stone-900 dark:text-stone-100 uppercase tracking-wider">Select Size</h3>
+            <button class="flex items-center text-xs text-stone-500 hover:text-primary transition-colors border-b border-stone-300 pb-0.5">
+                <span class="material-icons-outlined text-sm mr-1">straighten</span>
+                Size Guide
+            </button>
+        </div>
+        <div id="size-options" class="grid grid-cols-5 gap-3">
+            <!-- Size options will be dynamically inserted here -->
+        </div>
+    </div>
 </div>
 <div class="mt-10 flex gap-4">
-<button class="flex-1 bg-primary border border-transparent rounded-sm py-4 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-[#6d1d29] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary btn-animate shadow-lg shadow-primary/30 transition-all duration-300" type="submit">
+<button id="add-to-cart-btn" data-product-id="1" class="flex-1 bg-primary border border-transparent rounded-sm py-4 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-[#6d1d29] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary btn-animate shadow-lg shadow-primary/30 transition-all duration-300" type="submit">
 <span class="material-icons-outlined mr-2">shopping_bag</span>
                         ADD TO CART
                     </button>
@@ -207,7 +94,7 @@
 <div class="mt-12 border-t border-stone-200 dark:border-stone-700">
 <div class="border-b border-stone-200 dark:border-stone-700">
 <button class="group relative w-full py-4 flex justify-between items-center text-left focus:outline-none">
-<span class="text-sm font-bold text-stone-900 dark:text-stone-100 uppercase tracking-wider">Material &amp; Care</span>
+<span class="text-sm font-bold text-stone-900 dark:text-stone-100 uppercase tracking-wider">Material & Care</span>
 <span class="material-icons-outlined text-stone-400 group-hover:text-primary transition-colors transform rotate-180">expand_less</span>
 </button>
 <div class="pb-4 text-sm text-stone-600 dark:text-stone-300 font-light">
@@ -221,7 +108,7 @@
 </div>
 <div class="border-b border-stone-200 dark:border-stone-700">
 <button class="group relative w-full py-4 flex justify-between items-center text-left focus:outline-none">
-<span class="text-sm font-bold text-stone-900 dark:text-stone-100 uppercase tracking-wider">Shipping &amp; Returns</span>
+<span class="text-sm font-bold text-stone-900 dark:text-stone-100 uppercase tracking-wider">Shipping & Returns</span>
 <span class="material-icons-outlined text-stone-400 group-hover:text-primary transition-colors">expand_more</span>
 </button>
 </div>
@@ -325,42 +212,4 @@
 </div>
 </div>
 </main>
-<footer class="bg-surface-light dark:bg-surface-dark border-t border-stone-200 dark:border-stone-800 pt-16 pb-8">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="lg:flex lg:justify-between lg:items-center mb-12">
-<div class="mb-8 lg:mb-0">
-<h3 class="font-display text-2xl text-stone-900 dark:text-white mb-2">Join Our Newsletter</h3>
-<p class="text-stone-500 dark:text-stone-400 text-sm">Subscribe to receive updates, access to exclusive deals, and more.</p>
-</div>
-<div class="w-full lg:w-96">
-<div class="flex shadow-sm">
-<input class="flex-1 min-w-0 px-4 py-3 text-stone-900 bg-white dark:bg-stone-800 border border-stone-300 dark:border-stone-600 rounded-l-sm focus:ring-primary focus:border-primary block w-full text-sm" placeholder="Enter your email" type="email"/>
-<button class="inline-flex items-center px-6 py-3 border border-l-0 border-stone-300 dark:border-stone-600 rounded-r-sm bg-primary text-white text-sm font-medium hover:bg-opacity-90 transition-colors">
-<span class="material-icons-outlined text-lg">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-<div class="border-t border-stone-200 dark:border-stone-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-<div class="flex space-x-6 mb-4 md:mb-0">
-<a class="text-sm text-stone-500 hover:text-primary transition-colors" href="#">New Arrivals</a>
-<a class="text-sm text-stone-500 hover:text-primary transition-colors" href="#">Women</a>
-<a class="text-sm text-stone-500 hover:text-primary transition-colors" href="#">Men</a>
-<a class="text-sm text-stone-500 hover:text-primary transition-colors" href="#">Kids</a>
-<a class="text-sm text-stone-500 hover:text-primary transition-colors" href="#">Blog</a>
-<a class="text-sm text-stone-500 hover:text-primary transition-colors" href="#">Contact</a>
-</div>
-<div class="flex space-x-4">
-<a class="text-stone-400 hover:text-primary transition-colors" href="#">
-<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
-</a>
-<a class="text-stone-400 hover:text-primary transition-colors" href="#">
-<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
-</a>
-</div>
-</div>
-<p class="mt-4 text-center text-xs text-stone-400">© 2024 Aanya's Heritage. All rights reserved.</p>
-</div>
-</footer>
-
-</body></html>
+<%- include('partials/footer') %>
